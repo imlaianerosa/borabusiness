@@ -1,0 +1,50 @@
+<div id="wrapper">
+  <div id="container">
+    <div class="header">
+      <img (click)="backBtn()" src="../../../assets/arrow left_.svg" alt="" />
+    </div>
+    <header>
+      <img class="logo__img" src="../../assets/logo.png" />
+    </header>
+    <div id="content"></div>
+  </div>
+</div>
+
+<div>
+  <h1 class="title">Evento</h1>
+</div>
+
+<div class="input">
+  <form action="" class="form" [formGroup]="form">
+    <label for="evento"
+      >Nome do evento <span style="color: red; padding-left: 2px"> *</span>
+    </label>
+    <input formControlName="nomeEvento" type="text" name="evento" required />
+
+    <label for="descricao"
+      >Descrição <span style="color: red; padding-left: 2px"> *</span>
+    </label>
+    <input
+      formControlName="descricaoEvento"
+      type="text"
+      name="descricao"
+      required
+    />
+
+    <label for="local"
+      >Local <span style="color: red; padding-left: 2px"> *</span>
+    </label>
+    <input formControlName="localEvento" type="text" name="local" required />
+
+    <label for="data"
+      >Data <span style="color: red; padding-left: 2px"> *</span>
+    </label>
+    <input formControlName="dataEvento" type="date" name="data" required />
+  </form>
+</div>
+
+<footer class="btn">
+  <button (click)="postEvento()" class="btn__entrar" type="submit">
+    Cadastrar
+  </button>
+</footer>

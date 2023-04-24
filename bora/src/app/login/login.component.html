@@ -1,0 +1,33 @@
+<div id="wrapper">
+  <div id="container">
+    <div class="header">
+      <img (click)="backBtn()" src="../../../assets/arrow left_.svg" alt="" />
+    </div>
+    <header>
+      <img class="logo__img" src="../../assets/logo.png" />
+    </header>
+  </div>
+</div>
+
+<div class="content">
+  <div id="titulo">
+    <h1 class="title">Entrar</h1>
+  </div>
+  <div class="input">
+    <form action="" class="form" [formGroup]="form">
+      <label for="user"
+        >E-mail <span style="color: red; padding-left: 2px"> *</span>
+      </label>
+      <input formControlName="email" type="email" name="user" required />
+
+      <label for="user"
+        >Senha <span style="color: red; padding-left: 2px"> *</span></label
+      >
+      <input formControlName="senha" type="password" name="user" required />
+    </form>
+    <p class="forget" (click)="putAlteraSenha()">Esqueci minha senha</p>
+  </div>
+  <footer class="btn">
+    <button (click)="postLogin()" class="btn__entrar">ENTRAR</button>
+  </footer>
+</div>

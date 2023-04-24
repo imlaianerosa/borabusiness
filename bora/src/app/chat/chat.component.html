@@ -1,0 +1,86 @@
+<section class="chat">
+  <div class="header">
+    <img (click)="goToChats()" src="../../../assets/arrow left_.svg" alt="" />
+    <img src="../../../assets/menu_.svg" alt="" />
+  </div>
+
+  <div class="messages">
+    <div class="nome-user">
+      <img
+        src="../../../assets/239363815_344713897664306_3306552333959732867_n.jpeg"
+        alt=""
+      />
+      <h1>Bruna</h1>
+    </div>
+    <div class="balloon" *ngFor="let message of messages">
+      <div class="sent">
+        <p> {{ message.mensagem }} <span> {{ message.dataHoraEnvio }} </span></p>
+      </div>
+
+
+      <!-- <div class="received">
+        <p>Olá, tudo bem e voce? <span>31/03/2023 13:38</span></p>
+      </div>
+      <div class="sent">
+        <p>Estou ótima!!! <span>31/03/2023 13:43</span></p>
+      </div>
+      <div class="sent">
+        <p>
+          Gostária de uma carona para o evento, podemos combinar?
+          <span>31/03/2023 13:35</span>
+        </p>
+      </div>
+      <div class="received">
+        <p>Claro!!! <span>31/03/2023 14:07</span></p>
+      </div>
+      <div class="sent">
+        <p>
+          Maravilha! Moro em Salto, seria víavel passar por lá?
+          <span>31/03/2023 14:10</span>
+        </p>
+      </div>
+      <div class="received">
+        <p>
+          Sim!!! é o caminho que costumo fazer para a cidade do evento.
+          <span>31/03/2023 14:15</span>
+        </p>
+      </div>
+      <div class="sent">
+        <p>
+          Podemos combinar um horário e local para nos encontrar?
+          <span>31/03/2023 14:29</span>
+        </p>
+      </div>
+      <div class="sent">
+        <p>
+          Sim, pode me esperar por volta das 07h na rodoviária.
+          <span>31/03/2023 14:34</span>
+        </p>
+      </div>
+      <div class="received">
+        <p>Perfeito!!! <span>31/03/2023 14:35</span></p>
+      </div>-->
+
+      
+    </div> 
+    <div class="input">
+      <form [formGroup]="form" action="">
+        <input formControlName="mensagem" type="text" [(ngModel)]="newMessage" />
+        <img
+          type="submit"
+          (click)="postMensagem()"
+          src="../../../assets/send1_.svg"
+        />
+      </form>
+    </div>
+  </div>
+</section>
+
+<nav class="sidebar" [class.open]="menuOpen">
+  <ul>
+    <li><a (click)="goToFeed()">Feed</a></li>
+    <li><a (click)="goToConversas()">Conversas</a></li>
+    <li><a (click)="goToEdit()">Editar Perfil</a></li>
+    <li><a (click)="exit()">Sair</a></li>
+  </ul>
+</nav>

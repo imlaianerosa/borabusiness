@@ -1,0 +1,166 @@
+.chat {
+  width: 100%;
+  display: grid;
+  .header {
+    color: #f5f5f5;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+  }
+
+  .messages {
+    margin-top: 28px;
+    background: #232558;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 85vh;
+    border-radius: 10px;
+  }
+
+  .nome-user {
+    display: flex;
+    width: 85%;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 18px;
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 100px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      color: #f5f5f5;
+      margin: 0px 0px 0px 16px;
+    }
+  }
+
+  .balloon {
+    height: 66vh;
+    overflow: scroll;
+  }
+
+  .sent {
+    display: flex;
+    justify-content: end;
+    text-align: end;
+    margin-right: 12px;
+    p {
+      display: grid;
+      width: 60%;
+      background: #d7dae1;
+      border-radius: 10px;
+      padding: 5px;
+      span {
+        font-size: 0.5em;
+        margin-right: 2.5px;
+      }
+    }
+  }
+
+  .received {
+    display: flex;
+    margin-left: 12px;
+    p {
+      width: 60%;
+      background: rgb(146 188 168);
+      border-radius: 10px;
+      padding: 5px;
+      display: grid;
+      span {
+        font-size: 0.5em;
+        margin-left: 2.5px;
+      }
+    }
+  }
+
+  .input {
+    display: grid;
+    bottom: 40px;
+    position: fixed;
+    width: 80%;
+    align-items: end;
+    text-align: center;
+    input {
+      background-color: #fff;
+      width: 72%;
+      height: 25px;
+      border-radius: 10px;
+      margin: 24px 8% 0 5%;
+    }
+    img {
+      margin-bottom: -6px;
+      margin-right: 6px;
+    }
+  }
+}
+
+/* Estilo do cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Estilo do botão de menu */
+header button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Estilo do menu lateral */
+nav.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 80%;
+  max-width: 300px;
+  background-color: #232558;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+/* Estilo do menu lateral quando aberto */
+nav.sidebar.open {
+  transform: translateX(0);
+  z-index: 1;
+}
+
+/* Estilo dos links do menu */
+nav.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px;
+}
+
+nav.sidebar li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+nav.sidebar li:last-child {
+  border-bottom: none;
+}
+
+nav.sidebar a {
+  color: #eee;
+  text-decoration: none;
+}
+
+nav.sidebar a:hover {
+  text-decoration: underline;
+}

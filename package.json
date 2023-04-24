@@ -1,0 +1,21 @@
+{
+    "name": "TG-BORA",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/alicevalves/TG-BORA.git",
+    "author": "alicevalves <73171191+alicevalves@users.noreply.github.com>",
+    "license": "MIT",
+    "scripts": {
+      "start": "nodemon src/server.js"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.21"
+    },
+    "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^4.18.2",
+      "firebase": "^7.24.0"
+    }
+  }
+  
+  

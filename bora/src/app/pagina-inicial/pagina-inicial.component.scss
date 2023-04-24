@@ -1,0 +1,37 @@
+footer{
+    margin-bottom: 40px;
+  }
+  
+  .btn {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    flex-direction: column;
+    &__entrar {
+      font-size: 1em;
+      color: white;
+      background-color: #a19f9f;
+      height: 35px;
+      border-radius: 5px;
+    }
+    &__cadastro {
+      font-size: 1em;
+      margin-top: 25px;
+      color: white;
+      background-color: #a19f9f;
+      height: 35px;
+      border-radius: 5px;
+    }
+  }
+
+  .logo__img {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    top: 80px
+}
+  

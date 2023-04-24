@@ -1,0 +1,74 @@
+<section class="feed">
+  <div class="header">
+    <h1>Feed</h1>
+    <img src="../../../assets/menu_.svg" alt="" (click)="toggleMenu()" />
+  </div>
+  <div class="evento" *ngFor="let evento of eventos; let i = index" >
+    <div>
+      <img
+        (click)="setDadosDoUsuario(i)"
+        class="img"
+        src="../../assets/linkedin_.svg"
+      />
+      <span > Usuario </span>
+    </div>
+    <div class="data">
+      <img src="../../../assets/calendar_.svg" alt="" />
+      <span> {{ evento.dataEvento | date : "dd/MM/yyyy" }} </span>
+    </div>
+    <div class="local">
+      <img src="../../../assets/globe_.svg" alt="" />
+      <span> {{ evento.localEvento }} </span>
+    </div>
+    <div class="titulo">
+      <span> {{ evento.nomeEvento }} </span>
+    </div>
+    <div class="descricao">
+      <span> {{ evento.descricaoEvento }} </span>
+    </div>
+    <div class="btn-bora">
+      <button class="button" (click)="onItemClick(i)">Bora?!</button>
+    </div>
+  </div>
+
+  <footer>
+    <img
+      (click)="goToRegisterEvent()"
+      src="../../../assets/add circle_.svg"
+      alt=""
+    />
+  </footer>
+</section>
+
+<div class="modal" *ngIf="mostrarPerfil">
+  <div class="topo">
+    <img
+      (click)="closeModal()"
+      src="../../../assets/close circle_.svg"
+      alt=""
+    />
+  </div>
+
+  <div><h1 class="tit">Perfil</h1></div>
+  <div class="content">
+    <img class="foto" [src]="fotoUser" alt="" />
+    <h1>{{ nomeUser }}</h1>
+    <div class="links">
+      <a [href]="linkedin"
+        ><img src="../../../assets/linkedin_.svg" alt=""
+      /></a>
+      <a [href]="email">
+        <img src="../../../assets/envelope lines thin_.svg" alt="" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<nav class="sidebar" [class.open]="menuOpen">
+  <ul>
+    <li><a (click)="goToFeed()">Feed</a></li>
+    <li><a (click)="goToConversas()">Conversas</a></li>
+    <li><a (click)="goToEdit()">Editar Perfil</a></li>
+    <li><a (click)="exit()">Sair</a></li>
+  </ul>
+</nav>

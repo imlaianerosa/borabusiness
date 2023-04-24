@@ -1,0 +1,12 @@
+.load{
+    width: 100%;
+    display: flex;
+    &__img{
+        margin-top: 22vh;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+}
+
